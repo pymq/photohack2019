@@ -1,6 +1,3 @@
-PIPELINE:
 
-import pandas as pd
-data = pd.read_csv('animation_moves.csv')
-body_parts = process_image(img, path_to_model) #Изображение человека и путь к модели (по дефолту model/keras/model.h5)
-get_anim(frame_count,body_parts,data,background) #Frame_count - количество кадров в анимации, data - pandas.DataFrame. Background - ищображение фона. Вроде закостылено на то, что оно должно иметь ту же форму что и img
+- animation_moves.csv - файл с углами для 10 движущихся частей для каждого кадра анимации, сгенерированный [программой](https://github.com/GrigoryKrasnochub/Skeleton-animation-frame-by-frame-with-10-bones)
+- main.py - API запрос /magic, который получает на вход 'image' файл с картинкой, выделяет на изображении человека, убирает лишнее, определяет точки скелета, анимирует и возвращает url для итоговой гифки
